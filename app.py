@@ -1,4 +1,4 @@
-#!/usr/bin/python 
+#!/usr/bin/python
 from flask import Flask, render_template, redirect, request
 import subprocess
 app = Flask(__name__) 
@@ -17,8 +17,7 @@ def Call(c_output = None):
 		p_status = p.wait()
 		print ("Command output : ",output.decode())
 		c_output = output.decode()
-	
 	return render_template("command.html", c_output = c_output)
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0')
+	app.run()
