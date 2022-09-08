@@ -1,4 +1,3 @@
-#!/usr/bin/python
 from flask import Flask, render_template, redirect, request
 import subprocess
 app = Flask(__name__) 
