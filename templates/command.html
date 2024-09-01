@@ -1,113 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!---<title> Responsive Registration Form | CodingLab </title>--->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-}
-body{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
-}
-.container{
-  max-width: 700px;
-  width: 100%;
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-.container .title{
-  font-size: 25px;
-  font-weight: 500;
-  position: relative;
-}
-.container .title::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  border-radius: 5px;
-  background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
-}
-form .button{
-   height: 45px;
-   margin: 35px 0
- }
- form .button input{
-   height: 100%;
-   width: 100%;
-   border-radius: 5px;
-   border: none;
-   color: #fff;
-   font-size: 18px;
-   font-weight: 500;
-   letter-spacing: 1px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   background: linear-gradient(to right, #99004d 0%, #ff0080 100%);
- }
- form .button input:hover{
-  /* transform: scale(0.99); */
-  background: linear-gradient(to left, #99004d 0%, #ff0080 100%);
-  }
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
-}
-@media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Command Executor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
-
-   <body>   
-      <div class="container">  
-        <form action = "http://localhost:5000/Call" method = "post">
-           
-              <p>Enter your command:</p>
-                    
-              <div class="title">
-              <p><input type = "text" name = "command" /></p>
-              </div>
-            <div class="button">    
-
-            <p>
-              <input type = "submit" value = "See output" />
-            </p>
-
+<body>
+    <div class="container">
+        <form action="http://localhost:5000/Terminal" method="post">
+            <p>Enter your command:</p>
+            <div class="title">
+                <p><input type="text" name="command" /></p>
             </div>
-  
+            <div class="button">
+                <p><input type="submit" value="See output" /></p>
+            </div>
         </form>
 
         <div>
-          {% if c_output %}
-          <h1>Le retour de la commande est: !</h1>
-          <div class="c_retour">
-          
-          <form>
-          <textarea>{{ c_output }}</textarea>
-          </form>
-          </div>
-          {% else %}
-          <h1>Le retour de la commande va etre imprimé ici</h1>
-          {% endif %}
+            {% if c_output %}
+            <h1>OUTPUT</h1>
+            <div class="c_retour">
+                <form>
+                    <textarea>{{ c_output }}</textarea>
+                </form>
+            </div>
+            {% else %}
+            <h1>No output</h1>
+            {% endif %}
         </div>
-
-      </div>    
-   </body>
+    </div>
+</body>
 </html>
