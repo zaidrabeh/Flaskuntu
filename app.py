@@ -7,8 +7,8 @@ def output():
 	return render_template("command.html")
 
 
-@app.route('/Call', methods=['POST', 'GET'])
-def Call(c_output = None):
+@app.route('/Terminal', methods=['POST', 'GET'])
+def Terminal(c_output = None):
 	if request.method == 'POST':
 		command = request.form.get('command')
 		p = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True)
