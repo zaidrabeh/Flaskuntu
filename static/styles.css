@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: url('/static/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 900px; 
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #fff; 
+    padding: 25px 30px; 
+    border-radius: 5px; 
+    box-shadow: 0 5px 10px rgba(10, 10, 10, 55); 
+    box-sizing: border-box; 
+
+}
+
+.container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #006400 0%, #00ff00 100%);
+}
+
+form .button {
+    height: 45px;
+    margin: 35px 0;
+}
+
+form .button input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #006400 0%, #00ff00 100%);
+}
+
+form .button input:hover {
+    background: linear-gradient(to left, #006400 0%, #00ff00 100%);
+}
+
+@media (max-width: 584px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 459px) {
+    .container .content .category {
+        flex-direction: column;
+    }
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+    max-height: 400px;
+    resize: none;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
