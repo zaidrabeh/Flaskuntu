@@ -18,8 +18,8 @@ This is a Flask application that allows you to manage your command line remotely
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/remote-command-line-manager.git
-cd remote-command-line-manager
+https://github.com/zaidrabeh/Flaskuntu.git
+cd Flaskuntu
 ```
 
 2. Create a virtual environment and activate it:
