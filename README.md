@@ -18,7 +18,7 @@ This is a Flask application that allows you to manage your command line remotely
 
 1. Clone the repository:
 ```
-https://github.com/zaidrabeh/Flaskuntu.git
+git clone https://github.com/zaidrabeh/Flaskuntu.git
 cd Flaskuntu
 ```
 
